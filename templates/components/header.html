@@ -27,9 +27,12 @@
         <div class="header-sticky">
             <div class="container">
                 <div class="row align-items-center">
-
+                     
                     <!-- Header Logo Start -->
                     <div class="col-xl-2 col-6">
+                        <a href="javascript:void(0)" class="header-action-btn header-action-btn-menu d-xl-none d-lg-block">
+                            <i class="fa fa-bars"></i>
+                        </a>
                         <div class="header-logo">
                             <a href="/"><img src="{% static "assets/images/logo/logo.png" %}"
                                              alt="Site Logo"/></a>
@@ -158,28 +161,26 @@
                             </ul>
                         </li>
                         <li class="has-children">
-                            <a href="#">Pages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <ul class="dropdown">
+                            <!-- <a href="#">Pages <i class="fa fa-angle-down" aria-hidden="true"></i></a> -->
+                            <!-- <ul class="dropdown">
                                 <li><a href="about.html">About Us</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                                 <li><a href="faq.html">Faq</a></li>
                                 <li><a href="404-error.html">Error 404</a></li>
                                 <li><a href="my-account.html">My Account</a></li>
                                 <li><a href="{% login-register.html">Loging | Register</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="has-children">
-                            <a href="#">Blog <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <ul class="dropdown">
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
-                                <li><a href="blog-details-sidebar.html">Blog Details Sidebar</a></li>
+                            <a href="#">Profile <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <ul class="widget-list dropdown">
+                                <li><a href="{% url "profile" %}">Account</a></li>
+                                <li><a href="{% url "wishlist" %}">Wishlist</a></li>
+                                <li><a href="{% url "open_order" %}">Cart</a></li>
                             </ul>
                         </li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{% url "about" %}">About Us</a></li>
+                        <li><a href="{% url "contact" %}">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
