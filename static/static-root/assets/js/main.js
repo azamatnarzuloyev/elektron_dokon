@@ -94,8 +94,8 @@
         spaceBetween: 30,
         slidesPerView: 1,
 		effect: 'fade',
-		// pagination: true,
-		// navigation: true,
+		pagination: true,
+		navigation: true,
 
 
         // Navigation arrows
@@ -116,8 +116,8 @@
 		loop: true,
 		slidesPerView: 3,
 		spaceBetween: 0,
-		// pagination: true,
-		// navigation: true,
+		pagination: true,
+		navigation: true,
 		observer: true,
 		observeParents: true,
 
@@ -165,7 +165,7 @@
 		slidesPerView: 1,
 		spaceBetween: 0,
 		pagination: false,
-		// navigation: true,
+		navigation: true,
 		observer: true,
 		observeParents: true,
 
@@ -180,8 +180,8 @@
         loop: true,
         slidesPerView: 2,
 		spaceBetween: 0,
-		// pagination: true,
-		// navigation: true,
+		pagination: true,
+		navigation: true,
 		observer: true,
 		observeParents: true,
 
@@ -220,7 +220,7 @@
 		slidesPerView: 1,
 		spaceBetween: 0,
 		pagination: false,
-		// navigation: true,
+		navigation: true,
 		observer: true,
 		observeParents: true,
 
@@ -239,7 +239,7 @@
 		slidesPerView: 1,
 		spaceBetween: 0,
 		pagination: false,
-		// navigation: true,
+		navigation: true,
 		observer: true,
 		observeParents: true,
 
@@ -258,7 +258,7 @@
 		slidesPerView: 1,
 		spaceBetween: 0,
 		pagination: false,
-		// navigation: true,
+		navigation: true,
 		observer: true,
 		observeParents: true,
 
