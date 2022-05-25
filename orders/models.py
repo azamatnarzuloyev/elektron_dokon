@@ -4,9 +4,9 @@ from products.models import Products, Size
 
 
 STATUS = (
-    ("Pending", "Pending"),
-    ("Approved", "Approved"),
-    ("Delivered", "Delivered"),
+    ("ожидании", "ожидании"),
+    ("Одобренный", "Одобренный"),
+    ("Доставленный", "Доставленный"),
 )
 
 
@@ -17,7 +17,7 @@ class Order(models.Model):
     user                    = models.ForeignKey(Account, on_delete=models.CASCADE)
     is_paid                 = models.BooleanField(default=False)
     payment_date            = models.DateTimeField(blank=True, null=True)
-    delivery_status         = models.CharField(max_length=150, choices=STATUS, default="Pending")
+    delivery_status         = models.CharField(max_length=150, choices=STATUS, default="ожидании")
     total                   = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     is_used_coupon          = models.BooleanField(default=False)
     discount                = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
