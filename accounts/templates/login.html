@@ -9,12 +9,12 @@
         <div class="breadcrumb-area bg-light">
             <div class="container-fluid">
                 <div class="breadcrumb-content text-center">
-                    <h1 class="title">Login</h1>
+                    <h1 class="title">Вход</h1>
                     <ul>
                         <li>
                             <a href="{% url "home" %}">Home </a>
                         </li>
-                        <li class="active">Login</li>
+                        <li class="active">Вход</li>
                     </ul>
                 </div>
             </div>
@@ -35,8 +35,8 @@
 
                         <!-- Login Title & Content Start -->
                         <div class="section-content text-center mb-5">
-                            <h2 class="title mb-2">Login</h2>
-                            <p class="desc-content">Please login using account detail bellow.</p>
+                            <h2 class="title mb-2">Вход</h2>
+                            <p class="desc-content">Пожалуйста, войдите, используя данные учетной записи ниже.</p>
                         </div>
                         <!-- Login Title & Content End -->
 
@@ -65,23 +65,23 @@
                                     <div class="remember-meta mb-3">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="rememberMe">
-                                            <label class="custom-control-label" for="rememberMe">Remember Me</label>
+                                            <label class="custom-control-label" for="rememberMe">Запомни меня</label>
                                         </div>
                                     </div>
-                                    <a href="{% url "reset_password" %}" class="forget-pwd mb-3">Forget Password?</a>
+                                    <a href="{% url "reset_password" %}" class="forget-pwd mb-3">Забыть пароль?</a>
                                 </div>
                             </div>
                             <!-- Checkbox/Forget Password End -->
 
                             <!-- Login Button Start -->
                             <div class="single-input-item mb-3">
-                                <button class="btn btn btn-dark btn-hover-primary rounded-0">Login</button>
+                                <button class="btn btn btn-dark btn-hover-primary rounded-0">Вход</button>
                             </div>
                             <!-- Login Button End -->
 
                             <!-- Lost Password & Creat New Account Start -->
                             <div class="lost-password">
-                                <a href="{% url "register" %}">Create Account</a>
+                                <a href="{% url "register" %}">Зарегистрироваться</a>
                             </div>
                             <!-- Lost Password & Creat New Account End -->
 

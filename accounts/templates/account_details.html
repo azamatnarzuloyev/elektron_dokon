@@ -10,12 +10,12 @@
         <div class="breadcrumb-area bg-light">
             <div class="container-fluid">
                 <div class="breadcrumb-content text-center">
-                    <h1 class="title">My Account</h1>
+                    <h1 class="title">Мой счет</h1>
                     <ul>
                         <li>
                             <a href="index.html">Home </a>
                         </li>
-                        <li class="active"> My Account</li>
+                        <li class="active"> Мой счет</li>
                     </ul>
                 </div>
             </div>
@@ -40,12 +40,12 @@
                                 <div class="myaccount-tab-menu nav" role="tablist">
                                     <a href="#dashboad" class="active" data-bs-toggle="tab"><i
                                             class="fa fa-dashboard"></i>
-                                        Dashboard</a>
-                                    <a href="#orders" data-bs-toggle="tab"><i class="fa fa-cart-arrow-down"></i> Orders</a>
+                                            Панель приборов</a>
+                                    <a href="#orders" data-bs-toggle="tab"><i class="fa fa-cart-arrow-down"></i> Заказы</a>
                                     <a href="#address-edit" data-bs-toggle="tab"><i class="fa fa-map-marker"></i>
-                                        address</a>
-                                    <a href="#account-info" data-bs-toggle="tab"><i class="fa fa-user"></i> Account
-                                        Details</a>
+                                        адрес</a>
+                                    <a href="#account-info" data-bs-toggle="tab"><i class="fa fa-user"></i> 
+                                        Детали учетной записи</a>
                                     <a href="{% url "logout" %}"><i class="fa fa-sign-out"></i> Logout</a>
                                 </div>
                             </div>
@@ -57,14 +57,12 @@
                                     <!-- Single Tab Content Start -->
                                     <div class="tab-pane fade show active" id="dashboad" role="tabpanel">
                                         <div class="myaccount-content">
-                                            <h3 class="title">Dashboard</h3>
+                                            <h3 class="title">Панель приборов</h3>
                                             <div class="welcome">
-                                                <p>Hello, <strong>{{ user_info.username }}</strong> (If Not <strong>{{ user_info.username }}</strong><a
+                                                <p>Привет, <strong>{{ user_info.username }}</strong> (If Not <strong>{{ user_info.username }}</strong><a
                                                         href="{% url "logout" %}" class="logout"> Logout</a>)</p>
                                             </div>
-                                            <p class="mb-0">From your account dashboard. you can easily check & view
-                                                your recent orders, manage your shipping and billing addresses and edit
-                                                your password and account details.</p>
+                                            <p class="mb-0">Из панели управления вашей учетной записи. вы можете легко проверять и просматривать свои последние заказы, управлять адресами доставки и выставления счетов, а также редактировать свой пароль и данные учетной записи.</p>
                                         </div>
                                     </div>
                                     <!-- Single Tab Content End -->
@@ -72,17 +70,17 @@
                                     <!-- Single Tab Content Start -->
                                     <div class="tab-pane fade" id="orders" role="tabpanel">
                                         <div class="myaccount-content">
-                                            <h3 class="title">Orders</h3>
+                                            <h3 class="title">Заказы</h3>
                                                 <div class="myaccount-table table-responsive text-center">
                                                 {% if paid_orders is not None and paid_orders|length > 0 %}
                                                     <table class="table table-bordered">
                                                         <thead class="thead-light">
                                                         <tr>
-                                                            <th>Order</th>
-                                                            <th>Date</th>
-                                                            <th>Status</th>
-                                                            <th>Total</th>
-                                                            <th>Action</th>
+                                                            <th>порядок</th>
+                                                            <th>Дата</th>
+                                                            <th>Статус</th>
+                                                            <th>Общее</th>
+                                                            <th>Действие</th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
@@ -104,8 +102,8 @@
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="alert-warning p-3 text-center">
-                                                                You Haven't any Paid Order yet!! <a
-                                                                    href="{% url "open_order" %}"> Go to Your Cart</a>
+                                                                У вас еще нет оплаченного заказа!! <a
+                                                                    href="{% url "open_order" %}"> Перейти в корзину</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -119,13 +117,13 @@
                                     <!-- Single Tab Content Start -->
                                     <div class="tab-pane fade" id="address-edit" role="tabpanel">
                                         <div class="myaccount-content">
-                                            <h3 class="title">Orders Delivery Details</h3>
+                                            <h3 class="title">Детали доставки заказов</h3>
                                             <address>
                                                 <p><strong>{{ user_info.firstname }} {{ user_info.lastname }}</strong></p>
                                                 <hr>
                                                 <p><strong>{{ order_details.province }} / {{ order_details.city }} </strong><br>
                                                     {{ order_details.address }}</p>
-                                                <p>Mobile: {{ order_details.phone }}</p>
+                                                <p>Мобильный: {{ order_details.phone }}</p>
                                             </address>
                                         </div>
                                     </div>
@@ -134,22 +132,20 @@
                                     <!-- Single Tab Content Start -->
                                     <div class="tab-pane fade" id="account-info" role="tabpanel">
                                         <div class="myaccount-content">
-                                            <h3 class="title">Account Details</h3>
+                                            <h3 class="title">Детали учетной записи</h3>
                                             <div class="account-details-form">
                                                 <form action="#" method="post">
                                                     {% csrf_token %}
                                                     <div class="row">
                                                         <div class="col-lg-6">
                                                             <div class="single-input-item mb-3">
-                                                                <label for="firstname" class="required mb-1">First
-                                                                    Name</label>
+                                                                <label for="firstname" class="required mb-1">Имя</label>
                                                                 {{ profile_form.firstname }}
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6">
                                                             <div class="single-input-item mb-3">
-                                                                <label for="lastname" class="required mb-1">Last
-                                                                    Name</label>
+                                                                <label for="lastname" class="required mb-1">Фамилия</label>
                                                                 {{ profile_form.lastname }}
                                                             </div>
                                                         </div>
@@ -161,7 +157,7 @@
                                                     <div class="single-input-item single-item-button">
                                                         <button type="submit"
                                                                 class="btn btn btn-dark btn-hover-primary rounded-0">
-                                                            Save Changes
+                                                                Сохранить изменения
                                                         </button>
                                                     </div>
                                                 </form>

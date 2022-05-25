@@ -11,12 +11,12 @@
         <div class="breadcrumb-area bg-light">
             <div class="container-fluid">
                 <div class="breadcrumb-content text-center">
-                    <h1 class="title">Shopping Cart</h1>
+                    <h1 class="title">Корзина</h1>
                     <ul>
                         <li>
                             <a href="index.html">Home </a>
                         </li>
-                        <li class="active"> Shopping Cart</li>
+                        <li class="active"> Корзина</li>
                     </ul>
                 </div>
             </div>
@@ -40,12 +40,12 @@
                                 <!-- Table Head Start -->
                                 <thead>
                                 <tr>
-                                    <th class="pro-thumbnail">Image</th>
-                                    <th class="pro-title">Product</th>
-                                    <th class="pro-price">Price</th>
-                                    <th class="pro-quantity">Quantity</th>
-                                    <th class="pro-subtotal">Total</th>
-                                    <th class="pro-remove">Remove</th>
+                                    <th class="pro-thumbnail">Изображение</th>
+                                    <th class="pro-title">Продукт</th>
+                                    <th class="pro-price">Цена</th>
+                                    <th class="pro-quantity">Количество</th>
+                                    <th class="pro-subtotal">Общее</th>
+                                    <th class="pro-remove">Удалять</th>
                                 </tr>
                                 </thead>
                                 <!-- Table Head End -->
@@ -100,7 +100,7 @@
                                     {% csrf_token %}
                                     <input type="hidden" name="next" value="{{ request.path }}"/>
                                     {{ coupon_form.code }}
-                                    <button class="btn btn-dark btn-hover-primary rounded-0">Apply Coupon</button>
+                                    <button class="btn btn-dark btn-hover-primary rounded-0">Применить купон</button>
                                 </form>
                                 {% if messages %}
                                         {% for message in messages %}
@@ -126,14 +126,14 @@
                             <div class="cart-calculate-items">
 
                                 <!-- Cart Calculate Items Title Start -->
-                                <h3 class="title">Cart Totals</h3>
+                                <h3 class="title">Всего в корзине</h3>
                                 <!-- Cart Calculate Items Title End -->
 
                                 <!-- Responsive Table Start -->
                                 <div class="table-responsive">
                                     <table class="table">
                                         <tr>
-                                            <td>Sub Total</td>
+                                            <td>Промежуточный итог</td>
                                             <td>{{ order.total }}</td>
                                         </tr>
                                         <tr>
@@ -161,9 +161,7 @@
                             <!-- Cart Calculate Items End -->
 
                             <!-- Cart Checktout Button Start -->
-                            <a href="{% url "order_detail" %}" class="btn btn-dark btn-hover-primary rounded-0 w-100">Proceed
-                                To
-                                Checkout</a>
+                            <a href="{% url "order_detail" %}" class="btn btn-dark btn-hover-primary rounded-0 w-100">Перейти к оформлению заказа</a>
                             <!-- Cart Checktout Button End -->
 
                         </div>
@@ -179,7 +177,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="alert-warning p-3 text-center rounded-3 mb-10">
-                            Your Cart is Empty!!<a href="{% url "products" %}"> Go to Shop</a>
+                            Ваша корзина пуста!!<a href="{% url "products" %}"> Идти в магазин</a>
                         </div>
                     </div>
                 </div>

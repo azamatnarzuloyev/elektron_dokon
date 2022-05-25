@@ -49,7 +49,7 @@
                                 </li>
 
                                 <li class="has-children position-static">
-                                    <a href="{% url "products" %}"><span>Products</span> <i
+                                    <a href="{% url "products" %}"><span>Все категории</span> <i
                                             class="fa fa-angle-down"></i></a>
                                     <ul class="mega-menu row-cols-4">
                                         {% for category in categories %}
@@ -68,9 +68,9 @@
                                     </ul>
                                 </li>
                                 <li class="has-children">
-                                    <a href="{% url "about" %}"><span>About</span></a>
+                                    <a href="{% url "about" %}"><span>Сервисы</span></a>
                                 </li>
-                                <li><a href="{% url "contact" %}"> <span>Contact</span></a></li>
+                                <li><a href="{% url "contact" %}"> <span>Контакт</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -153,7 +153,9 @@
                             <a href="{% url "home" %}">Home </a>
                         </li>
                         <li class="has-children">
-                            <a href="#">Products <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <a href="#">
+                                Все категории
+                                 <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown">
                                 {% for category in categories %}
                                 <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
@@ -179,8 +181,8 @@
                                 <li><a href="{% url "open_order" %}">Cart</a></li>
                             </ul>
                         </li>
-                        <li><a href="{% url "about" %}">About Us</a></li>
-                        <li><a href="{% url "contact" %}">Contact Us</a></li>
+                        <li><a href="{% url "about" %}">Сервисы</a></li>
+                        <li><a href="{% url "contact" %}">Связаться с нами</a></li>
                     </ul>
                 </nav>
             </div>
@@ -192,7 +194,7 @@
                 <!-- Contact Links Start -->
                 <ul class="contact-links">
                     <li><i class="fa fa-phone"></i><a href="#"> +998990167647</a></li>
-                    <li><i class="fa fa-envelope-o"></i><a href="#"> azamatsabina1796@mail.ru</a></li>
+                    <li><i class="fa fa-envelope-o"></i><a href="#"> azamat1796@mail.ru</a></li>
                     <li><i class="fa fa-clock-o"></i> <span>Monday - Sunday 9.00 - 18.00</span></li>
                 </ul>
                 <!-- Contact Links End -->

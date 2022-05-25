@@ -7,7 +7,7 @@
             <div class="your-order-area border">
 
                 <!-- Title Start -->
-                <h3 class="title">Your Order</h3>
+                <h3 class="title">Твоя очередь</h3>
                 <!-- Title End -->
 
                 <!-- Your Order Table Start -->
@@ -17,8 +17,8 @@
                         <!-- Table Head Start -->
                         <thead>
                         <tr class="cart-product-head">
-                            <th class="cart-product-name text-start">Product</th>
-                            <th class="cart-product-total text-end">Total</th>
+                            <th class="cart-product-name text-start">Продукт</th>
+                            <th class="cart-product-total text-end">Общее</th>
                         </tr>
                         </thead>
                         <!-- Table Head End -->
@@ -41,19 +41,19 @@
                         <!-- Table Footer Start -->
                         <tfoot>
                         <tr class="cart-subtotal">
-                            <th class="text-start ps-0">Cart Subtotal</th>
+                            <th class="text-start ps-0">Корзина</th>
                             <td class="text-end pe-0"><span class="amount">${{ open_order.total }}</span></td>
                         </tr>
                         <tr class="cart-subtotal">
-                            <th class="text-start ps-0">Discount</th>
+                            <th class="text-start ps-0">Скидка</th>
                             {% if open_order.discount != None %}
                                 <td class="text-end pe-0"><span class="amount">${{ open_order.discount }}</span></td>
                             {% else %}
-                                <td class="text-end pe-0"><span class="amount">$0</span></td>
+                                <td class="text-end pe-0"><span class="amount">0</span></td>
                             {% endif %}
                         </tr>
                         <tr class="order-total">
-                            <th class="text-start ps-0">Order Total</th>
+                            <th class="text-start ps-0">Весь заказ</th>
                             {% if open_order.finally_total != None %}
                                 <td class="text-end pe-0"><strong><span
                                         class="amount">${{ open_order.finally_total }}</span></strong></td>
@@ -73,7 +73,7 @@
                 <div class="payment-accordion-order-button">
                     <div class="payment-accordion"></div>
                     <div class="order-button-payment">
-                        <a href="{% url "request" %}"></a><button class="btn btn-dark btn-hover-primary rounded-0 w-100">Place Order</button>
+                        <a href="{% url "request" %}"></a><button class="btn btn-dark btn-hover-primary rounded-0 w-100">Разместить заказ</button>
                     </div>
                 </div>
                 <!-- Payment Accordion Order Button End -->
