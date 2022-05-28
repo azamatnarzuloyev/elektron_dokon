@@ -18,7 +18,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['toso.uz','127.0.0.1']
+ALLOWED_HOSTS = ['toso.uz','46.101.207.199']
 
 
 # Application definition
