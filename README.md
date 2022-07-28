@@ -1,10 +1,8 @@
 # Django E-Commerce 
-Simple E-Commerce using Django 4.0 for Back-End and DRF (Django Rest Framework) for APIs
+django elektron dokon to'liq yaratilgan 
 
 
-# Installation
-> this project is using PostgreSQL DataBase. so you must config your DataBase from **_./e_shop/settings.py/DATABASES_** before DB migrations. also you need install redis on your system, because we using redis DB for caching (config: **_./e_shop/settings.py/CACHES_**).
-### install and create your virtual environment
+
 
 install virtualenv:
 ```
@@ -21,7 +19,7 @@ activate virtual environment:
 cd venv\Scripts\activate
 ```
 
-if you using Widows PowerShell, type this command in your PowerShell before activate virtual environment:
+Agar siz Widows PowerShell-dan foydalansangiz, virtual muhitni faollashtirishdan oldin PowerShell-ga ushbu buyruqni kiriting:
 ```
 Set-ExecutionPolicy Unrestricted -Scope Process
 ```
