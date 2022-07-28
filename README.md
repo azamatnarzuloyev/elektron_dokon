@@ -1,5 +1,5 @@
 # Django E-Commerce 
-django elektron dokon to'liq yaratilgan 
+django elektron toso elektron dokon yaratilgan
 
 
 
@@ -38,13 +38,12 @@ python3 manage.py migrate
 python3 manage.py collectstatic
 ```
 
-create super user for access to admin section:
+administrator bo'limiga kirish uchun super foydalanuvchi yarating:
 ```
 python3 manage.py createsuperuser
 ```
-*fill necessary fields*
+Loyihani ishga tushiring 
 
-run project on localhost (default port: 8000):
 ```
 python3 manage.py runserver <port>
 ```
