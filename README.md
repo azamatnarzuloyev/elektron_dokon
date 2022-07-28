@@ -20,11 +20,8 @@ cd venv\Scripts\activate
 ```
 
 Agar siz Widows PowerShell-dan foydalansangiz, virtual muhitni faollashtirishdan oldin PowerShell-ga ushbu buyruqni kiriting:
-```
-Set-ExecutionPolicy Unrestricted -Scope Process
-```
 
-### install requirements and run project
+
 
 install requirements:
 ```
