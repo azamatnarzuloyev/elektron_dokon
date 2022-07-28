@@ -1,4 +1,4 @@
-#django elektron dokon loyihasi 
+django elektron dokon loyihasi 
 
 
 
