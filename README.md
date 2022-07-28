@@ -1,5 +1,5 @@
-# Django E-Commerce 
-django elektron toso elektron dokon yaratilgan
+#django elektron dokon loyihasi 
+
 
 
 
